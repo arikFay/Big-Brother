@@ -81,8 +81,10 @@ func main() {
 					pcapFile.Close()
 				}
 
+				// Create the pcap file name with Ixia Anue timestamp
+				pcapFilename := fmt.Sprintf("%s/pcap_%d_%s_%s.pcap", saveDir, fileCount, time.Now().Format("20060102150405"), "ixia_anue")
+
 				// Create the pcap file
-				pcapFilename := fmt.Sprintf("%s/pcap_%d_%s.pcap", saveDir, fileCount, time.Now().Format("20060102150405"))
 				pcapFile, err = os.Create(pcapFilename)
 				if err != nil {
 					log.Fatal(err)
