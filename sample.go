@@ -15,7 +15,7 @@ import (
 )
 
 const (
-	sampleCount    = 20
+	sampleCount    = 200
 	captureTimeout = 5 * time.Second
 )
 
